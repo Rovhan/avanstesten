@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4a51e7dd-88e2-4a48-bdbd-7dd7858da684" activeEnvironment="Default" name="NopService" resourceRoot="${projectDir}" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="778cc5f3-c0f1-44cb-9b7b-afac4c1165bc" wsaVersion="NONE" name="BasicHttpBinding_INopService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_INopService" soapVersion="1_1" anonymous="optional" definition="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?wsdl"><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="NopService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      <xsd:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic"/>
+      <xsd:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Orders"/>
+      <xsd:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Payments"/>
+      <xsd:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Shipping"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INopService_GetPaymentMethodCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentMethodCollection"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetPaymentMethodCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentMethodCollectionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetShippingMethodCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShippingMethodCollection"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetShippingMethodCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShippingMethodCollectionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_ProductList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductList"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_ProductList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_NewProductList_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewProductList"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_NewProductList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewProductListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetProductBySku_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBySku"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetProductBySku_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBySkuResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetProductAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductAttributes"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetProductAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductAttributesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetProductAttributesValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductAttributesValue"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetProductAttributesValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductAttributesValueResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetCategoryCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryCollection"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetCategoryCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryCollectionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetManufacturerCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerCollection"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetManufacturerCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerCollectionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddress"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_AddNewAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewAddress"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_AddNewAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewAddressResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_AddToCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToCart"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_AddToCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToCartResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_DeleteFromCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromCart"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_DeleteFromCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromCartResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetShoppingCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCart"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetShoppingCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountry"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetStateProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateProvince"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetStateProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateProvinceResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_CreateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrder"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_CreateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetOrderCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderCollection"/>
+  </wsdl:message>
+  <wsdl:message name="INopService_GetOrderCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderCollectionResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="INopService">
+    <wsdl:operation name="GetPaymentMethodCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetPaymentMethodCollection" message="tns:INopService_GetPaymentMethodCollection_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetPaymentMethodCollectionResponse" message="tns:INopService_GetPaymentMethodCollection_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingMethodCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetShippingMethodCollection" message="tns:INopService_GetShippingMethodCollection_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetShippingMethodCollectionResponse" message="tns:INopService_GetShippingMethodCollection_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProductList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/ProductList" message="tns:INopService_ProductList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/ProductListResponse" message="tns:INopService_ProductList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="NewProductList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/NewProductList" message="tns:INopService_NewProductList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/NewProductListResponse" message="tns:INopService_NewProductList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductBySku">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetProductBySku" message="tns:INopService_GetProductBySku_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetProductBySkuResponse" message="tns:INopService_GetProductBySku_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetProductAttributes" message="tns:INopService_GetProductAttributes_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetProductAttributesResponse" message="tns:INopService_GetProductAttributes_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductAttributesValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetProductAttributesValue" message="tns:INopService_GetProductAttributesValue_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetProductAttributesValueResponse" message="tns:INopService_GetProductAttributesValue_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetCategoryCollection" message="tns:INopService_GetCategoryCollection_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetCategoryCollectionResponse" message="tns:INopService_GetCategoryCollection_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetManufacturerCollection" message="tns:INopService_GetManufacturerCollection_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetManufacturerCollectionResponse" message="tns:INopService_GetManufacturerCollection_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetAddress" message="tns:INopService_GetAddress_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetAddressResponse" message="tns:INopService_GetAddress_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/AddNewAddress" message="tns:INopService_AddNewAddress_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/AddNewAddressResponse" message="tns:INopService_AddNewAddress_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddToCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/AddToCart" message="tns:INopService_AddToCart_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/AddToCartResponse" message="tns:INopService_AddToCart_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/DeleteFromCart" message="tns:INopService_DeleteFromCart_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/DeleteFromCartResponse" message="tns:INopService_DeleteFromCart_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetShoppingCart" message="tns:INopService_GetShoppingCart_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetShoppingCartResponse" message="tns:INopService_GetShoppingCart_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetCountry" message="tns:INopService_GetCountry_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetCountryResponse" message="tns:INopService_GetCountry_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetStateProvince" message="tns:INopService_GetStateProvince_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetStateProvinceResponse" message="tns:INopService_GetStateProvince_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/CreateOrder" message="tns:INopService_CreateOrder_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/CreateOrderResponse" message="tns:INopService_CreateOrder_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/INopService/GetOrderCollection" message="tns:INopService_GetOrderCollection_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/INopService/GetOrderCollectionResponse" message="tns:INopService_GetOrderCollection_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INopService" type="tns:INopService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetPaymentMethodCollection">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetPaymentMethodCollection" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingMethodCollection">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetShippingMethodCollection" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductList">
+      <soap:operation soapAction="http://tempuri.org/INopService/ProductList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewProductList">
+      <soap:operation soapAction="http://tempuri.org/INopService/NewProductList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductBySku">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetProductBySku" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductAttributes">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetProductAttributes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductAttributesValue">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetProductAttributesValue" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryCollection">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetCategoryCollection" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerCollection">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetManufacturerCollection" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetAddress" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewAddress">
+      <soap:operation soapAction="http://tempuri.org/INopService/AddNewAddress" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToCart">
+      <soap:operation soapAction="http://tempuri.org/INopService/AddToCart" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromCart">
+      <soap:operation soapAction="http://tempuri.org/INopService/DeleteFromCart" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCart">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetShoppingCart" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetCountry" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateProvince">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetStateProvince" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <soap:operation soapAction="http://tempuri.org/INopService/CreateOrder" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderCollection">
+      <soap:operation soapAction="http://tempuri.org/INopService/GetOrderCollection" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NopService">
+    <wsdl:port name="BasicHttpBinding_INopService" binding="tns:BasicHttpBinding_INopService">
+      <soap:address location="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic"/>
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Orders"/>
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Payments"/>
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Shipping"/>
+  <xs:element name="GetPaymentMethodCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentMethodCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPaymentMethodCollectionResult" nillable="true" type="q1:ArrayOfPaymentMethod" xmlns:q1="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShippingMethodCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShippingMethodCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetShippingMethodCollectionResult" nillable="true" type="q2:ArrayOfShippingMethod" xmlns:q2="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="SearchCategoryId" nillable="true" type="xs:int"/>
+        <xs:element minOccurs="0" name="SearchManufacturerId" nillable="true" type="xs:int"/>
+        <xs:element minOccurs="0" name="SearchProductName" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductListResult" nillable="true" type="q3:ArrayOfProducts" xmlns:q3="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewProductList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewProductListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewProductListResult" nillable="true" type="q4:ArrayOfProducts" xmlns:q4="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductBySku">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sku" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductBySkuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductBySkuResult" nillable="true" type="q5:ArrayOfProducts" xmlns:q5="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sku" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductAttributesResult" nillable="true" type="q6:ArrayOfKeyValuePairOfintstring" xmlns:q6="http://schemas.datacontract.org/2004/07/System.Collections.Generic"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductAttributesValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sku" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="IdProductAttributes" type="xs:int"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductAttributesValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductAttributesValueResult" nillable="true" type="q7:ArrayOfKeyValuePairOfintstring" xmlns:q7="http://schemas.datacontract.org/2004/07/System.Collections.Generic"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryCollection">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryCollectionResult" nillable="true" type="q8:ArrayOfWebServiceCategory" xmlns:q8="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturerCollection">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturerCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetManufacturerCollectionResult" nillable="true" type="q9:ArrayOfWebServiceManufacturer" xmlns:q9="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAddressResult" nillable="true" type="q10:ArrayOfAddress" xmlns:q10="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="q11:Address" xmlns:q11="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddNewAddressResult" nillable="true" type="q12:CreateAddressResult" xmlns:q12="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddToCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sku" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="quantity" type="xs:int"/>
+        <xs:element minOccurs="0" name="pa" nillable="true" type="q13:ArrayOfProductAttributes" xmlns:q13="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddToCartResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFromCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sku" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFromCartResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetShoppingCartResult" nillable="true" type="q14:ArrayOfCart" xmlns:q14="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCountryResult" nillable="true" type="q15:ArrayOfCountry" xmlns:q15="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStateProvince">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountryId" type="xs:int"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStateProvinceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStateProvinceResult" nillable="true" type="q16:ArrayOfStateProvince" xmlns:q16="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="paymentMethodName" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="shippingMethodName" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="billingAddress" type="xs:int"/>
+        <xs:element minOccurs="0" name="shippingAddress" type="xs:int"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateOrderResult" nillable="true" type="q17:CreateOrderResult" xmlns:q17="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDateValue" nillable="true" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="endDateValue" nillable="true" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="orderStatus" nillable="true" type="q18:OrderStatus" xmlns:q18="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Orders"/>
+        <xs:element minOccurs="0" name="paymentStatus" nillable="true" type="q19:PaymentStatus" xmlns:q19="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Payments"/>
+        <xs:element minOccurs="0" name="shippingStatus" nillable="true" type="q20:ShippingStatus" xmlns:q20="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Shipping"/>
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int"/>
+        <xs:element minOccurs="0" name="usernameOrEmail" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrderCollectionResult" nillable="true" type="q21:ArrayOfWebServiceOrder" xmlns:q21="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer">
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Orders"/>
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Payments"/>
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Shipping"/>
+  <xs:complexType name="ArrayOfPaymentMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentMethod" nillable="true" type="tns:PaymentMethod"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentMethod" nillable="true" type="tns:ArrayOfPaymentMethod"/>
+  <xs:complexType name="PaymentMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaymentMethod" nillable="true" type="tns:PaymentMethod"/>
+  <xs:complexType name="ArrayOfShippingMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShippingMethod" nillable="true" type="tns:ShippingMethod"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShippingMethod" nillable="true" type="tns:ArrayOfShippingMethod"/>
+  <xs:complexType name="ShippingMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShippingMethod" nillable="true" type="tns:ShippingMethod"/>
+  <xs:complexType name="ArrayOfProducts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Products" nillable="true" type="tns:Products"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProducts" nillable="true" type="tns:ArrayOfProducts"/>
+  <xs:complexType name="Products">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Available" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int"/>
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FullDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="ManufacturerId" type="xs:int"/>
+      <xs:element minOccurs="0" name="ManufacturerName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Price" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UrlPicture" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UrlProduct" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Vat" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="YourPrice" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Products" nillable="true" type="tns:Products"/>
+  <xs:complexType name="ArrayOfWebServiceCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebServiceCategory" nillable="true" type="tns:WebServiceCategory"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebServiceCategory" nillable="true" type="tns:ArrayOfWebServiceCategory"/>
+  <xs:complexType name="WebServiceCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ParentCategoryId" type="xs:int"/>
+      <xs:element minOccurs="0" name="Published" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServiceCategory" nillable="true" type="tns:WebServiceCategory"/>
+  <xs:complexType name="ArrayOfWebServiceManufacturer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebServiceManufacturer" nillable="true" type="tns:WebServiceManufacturer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebServiceManufacturer" nillable="true" type="tns:ArrayOfWebServiceManufacturer"/>
+  <xs:complexType name="WebServiceManufacturer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Published" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServiceManufacturer" nillable="true" type="tns:WebServiceManufacturer"/>
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress"/>
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CountryId" type="xs:int"/>
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="StateProvinceId" type="xs:int"/>
+      <xs:element minOccurs="0" name="StateProvinceName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ZipPostalCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address"/>
+  <xs:complexType name="CreateAddressResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateAddressResult" nillable="true" type="tns:CreateAddressResult"/>
+  <xs:complexType name="ArrayOfProductAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductAttributes" nillable="true" type="tns:ProductAttributes"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductAttributes" nillable="true" type="tns:ArrayOfProductAttributes"/>
+  <xs:complexType name="ProductAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProductAttributeId" type="xs:int"/>
+      <xs:element minOccurs="0" name="ProductAttributeValue" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductAttributes" nillable="true" type="tns:ProductAttributes"/>
+  <xs:complexType name="ArrayOfCart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cart" nillable="true" type="tns:Cart"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCart" nillable="true" type="tns:ArrayOfCart"/>
+  <xs:complexType name="Cart">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Discount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Price" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PriceWithDiscount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Quantity" type="xs:int"/>
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TaxRate" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cart" nillable="true" type="tns:Cart"/>
+  <xs:complexType name="ArrayOfCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountry" nillable="true" type="tns:ArrayOfCountry"/>
+  <xs:complexType name="Country">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Country" nillable="true" type="tns:Country"/>
+  <xs:complexType name="ArrayOfStateProvince">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StateProvince" nillable="true" type="tns:StateProvince"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStateProvince" nillable="true" type="tns:ArrayOfStateProvince"/>
+  <xs:complexType name="StateProvince">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StateProvince" nillable="true" type="tns:StateProvince"/>
+  <xs:complexType name="CreateOrderResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateOrderResult" nillable="true" type="tns:CreateOrderResult"/>
+  <xs:complexType name="ArrayOfWebServiceOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebServiceOrder" nillable="true" type="tns:WebServiceOrder"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebServiceOrder" nillable="true" type="tns:ArrayOfWebServiceOrder"/>
+  <xs:complexType name="WebServiceOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillingAddress" nillable="true" type="tns:Address"/>
+      <xs:element minOccurs="0" name="BillingAddressId" type="xs:int"/>
+      <xs:element minOccurs="0" name="CheckoutAttributeDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CheckoutAttributesXml" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreatedOnUtc" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CurrencyRate" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CustomerCurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int"/>
+      <xs:element minOccurs="0" name="CustomerLanguageId" type="xs:int"/>
+      <xs:element minOccurs="0" name="CustomerTaxDisplayTypeId" type="xs:int"/>
+      <xs:element minOccurs="0" name="Deleted" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="OrderDiscount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderGuid" type="ser:guid"/>
+      <xs:element minOccurs="0" name="OrderId" type="xs:int"/>
+      <xs:element minOccurs="0" name="OrderProductVariants" nillable="true" type="tns:ArrayOfWebServiceOrderProductVariant"/>
+      <xs:element minOccurs="0" name="OrderShippingExclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderShippingInclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderStatus" type="q1:OrderStatus" xmlns:q1="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Orders"/>
+      <xs:element minOccurs="0" name="OrderSubTotalDiscountExclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderSubTotalDiscountInclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderSubtotalExclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderSubtotalInclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderTotal" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PaidDateUtc" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="PaymentMethodAdditionalFeeExclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PaymentMethodAdditionalFeeInclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PaymentMethodSystemName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentStatus" type="q2:PaymentStatus" xmlns:q2="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Payments"/>
+      <xs:element minOccurs="0" name="ShippingAddress" nillable="true" type="tns:Address"/>
+      <xs:element minOccurs="0" name="ShippingAddressId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="ShippingMethod" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ShippingRateComputationMethodSystemName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ShippingStatus" type="q3:ShippingStatus" xmlns:q3="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Shipping"/>
+      <xs:element minOccurs="0" name="TaxRates" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VatNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="_orderProductVariant" nillable="true" type="tns:ArrayOfWebServiceOrderProductVariant"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServiceOrder" nillable="true" type="tns:WebServiceOrder"/>
+  <xs:complexType name="ArrayOfWebServiceOrderProductVariant">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebServiceOrderProductVariant" nillable="true" type="tns:WebServiceOrderProductVariant"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebServiceOrderProductVariant" nillable="true" type="tns:ArrayOfWebServiceOrderProductVariant"/>
+  <xs:complexType name="WebServiceOrderProductVariant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttributeDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AttributesXml" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DiscountAmountExclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="DiscountAmountInclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ItemWeight" nillable="true" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OrderId" type="xs:int"/>
+      <xs:element minOccurs="0" name="PriceExclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PriceInclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ProductId" type="xs:int"/>
+      <xs:element minOccurs="0" name="Quantity" type="xs:int"/>
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UnitPriceExclTax" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="UnitPriceInclTax" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServiceOrderProductVariant" nillable="true" type="tns:WebServiceOrderProductVariant"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Orders" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Orders">
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:simpleType name="OrderStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Processing">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Complete">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cancelled">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderStatus" nillable="true" type="tns:OrderStatus"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd5</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Payments" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Payments">
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:simpleType name="PaymentStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Authorized">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Paid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PartiallyRefunded">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Refunded">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Voided">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">50</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PaymentStatus" nillable="true" type="tns:PaymentStatus"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd6</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Shipping" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Nop.Core.Domain.Shipping">
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:simpleType name="ShippingStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ShippingNotRequired">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NotYetShipped">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PartiallyShipped">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Shipped">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Delivered">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ShippingStatus" nillable="true" type="tns:ShippingStatus"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/System.Collections.Generic">
+  <xs:import schemaLocation="http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ArrayOfKeyValuePairOfintstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValuePairOfintstring" type="tns:KeyValuePairOfintstring"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKeyValuePairOfintstring" nillable="true" type="tns:ArrayOfKeyValuePairOfintstring"/>
+  <xs:complexType name="KeyValuePairOfintstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="KeyValuePairOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema"/>
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema"/>
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="key" type="xs:int"/>
+      <xs:element name="value" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KeyValuePairOfintstring" nillable="true" type="tns:KeyValuePairOfintstring"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint></con:endpoints><con:operation id="942c1686-bb45-4e3a-8fb6-25fd85098780" isOneWay="false" action="http://tempuri.org/INopService/AddNewAddress" name="AddNewAddress" bindingOperationName="AddNewAddress" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ce7326ac-5a73-464d-bdae-6e015cfa9ee6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:nop="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:AddNewAddress>\r
+         <!--Optional:-->\r
+         <tem:address>\r
+            <!--Optional:-->\r
+            <nop:Address1>?</nop:Address1>\r
+            <!--Optional:-->\r
+            <nop:City>?</nop:City>\r
+            <!--Optional:-->\r
+            <nop:Company>?</nop:Company>\r
+            <!--Optional:-->\r
+            <nop:CountryId>?</nop:CountryId>\r
+            <!--Optional:-->\r
+            <nop:CountryName>?</nop:CountryName>\r
+            <!--Optional:-->\r
+            <nop:Email>?</nop:Email>\r
+            <!--Optional:-->\r
+            <nop:FirstName>?</nop:FirstName>\r
+            <!--Optional:-->\r
+            <nop:Id>?</nop:Id>\r
+            <!--Optional:-->\r
+            <nop:LastName>?</nop:LastName>\r
+            <!--Optional:-->\r
+            <nop:StateProvinceId>?</nop:StateProvinceId>\r
+            <!--Optional:-->\r
+            <nop:StateProvinceName>?</nop:StateProvinceName>\r
+            <!--Optional:-->\r
+            <nop:ZipPostalCode>?</nop:ZipPostalCode>\r
+         </tem:address>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:AddNewAddress>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/AddNewAddress"/></con:call></con:operation><con:operation id="9a40edc8-a4c4-4a63-87c5-f22ba99d600a" isOneWay="false" action="http://tempuri.org/INopService/AddToCart" name="AddToCart" bindingOperationName="AddToCart" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="03879359-e331-4333-afe5-da44a79cbdc9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:nop="http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:AddToCart>\r
+         <!--Optional:-->\r
+         <tem:sku>?</tem:sku>\r
+         <!--Optional:-->\r
+         <tem:quantity>?</tem:quantity>\r
+         <!--Optional:-->\r
+         <tem:pa>\r
+            <!--Zero or more repetitions:-->\r
+            <nop:ProductAttributes>\r
+               <!--Optional:-->\r
+               <nop:ProductAttributeId>?</nop:ProductAttributeId>\r
+               <!--Optional:-->\r
+               <nop:ProductAttributeValue>?</nop:ProductAttributeValue>\r
+            </nop:ProductAttributes>\r
+         </tem:pa>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:AddToCart>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/AddToCart"/></con:call></con:operation><con:operation id="8280862a-6298-4920-b151-a2d973b66404" isOneWay="false" action="http://tempuri.org/INopService/CreateOrder" name="CreateOrder" bindingOperationName="CreateOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="34ca7d48-72d4-4f36-9949-e977b3fb8204" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:CreateOrder>\r
+         <!--Optional:-->\r
+         <tem:paymentMethodName>?</tem:paymentMethodName>\r
+         <!--Optional:-->\r
+         <tem:shippingMethodName>?</tem:shippingMethodName>\r
+         <!--Optional:-->\r
+         <tem:billingAddress>?</tem:billingAddress>\r
+         <!--Optional:-->\r
+         <tem:shippingAddress>?</tem:shippingAddress>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:CreateOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/CreateOrder"/></con:call></con:operation><con:operation id="5526359f-bcdc-4535-a110-541b47858336" isOneWay="false" action="http://tempuri.org/INopService/DeleteFromCart" name="DeleteFromCart" bindingOperationName="DeleteFromCart" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="845da082-b607-4599-82c5-492a232aaafa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:DeleteFromCart>\r
+         <!--Optional:-->\r
+         <tem:sku>?</tem:sku>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:DeleteFromCart>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/DeleteFromCart"/></con:call></con:operation><con:operation id="9f752777-1970-4f57-bec7-9a718d98e77e" isOneWay="false" action="http://tempuri.org/INopService/GetAddress" name="GetAddress" bindingOperationName="GetAddress" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a61f981-992a-465a-a36a-d045f39cf6cd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetAddress>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetAddress>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetAddress"/></con:call></con:operation><con:operation id="47c42a5b-7ce8-47e2-a031-b5fc1de1ef3c" isOneWay="false" action="http://tempuri.org/INopService/GetCategoryCollection" name="GetCategoryCollection" bindingOperationName="GetCategoryCollection" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6e357067-3132-49b7-9aa7-deef5678b83f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetCategoryCollection/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetCategoryCollection"/></con:call></con:operation><con:operation id="74852433-c8e7-4be8-a1f8-b25adc6505f4" isOneWay="false" action="http://tempuri.org/INopService/GetCountry" name="GetCountry" bindingOperationName="GetCountry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2e76b8b1-0986-49fc-904f-bf9fc7c89e43" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetCountry>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetCountry>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetCountry"/></con:call></con:operation><con:operation id="8e06dea9-7b53-45a9-8925-0bc7f6485f7d" isOneWay="false" action="http://tempuri.org/INopService/GetManufacturerCollection" name="GetManufacturerCollection" bindingOperationName="GetManufacturerCollection" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2f745e1c-e046-408e-a44f-969881795e4c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetManufacturerCollection/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetManufacturerCollection"/></con:call></con:operation><con:operation id="968b6012-f39b-403b-ba0c-dc0c9c685d1d" isOneWay="false" action="http://tempuri.org/INopService/GetOrderCollection" name="GetOrderCollection" bindingOperationName="GetOrderCollection" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="64a79c74-4ce2-4fe0-aea0-45e57ee068d9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetOrderCollection>\r
+         <!--Optional:-->\r
+         <tem:startDateValue>?</tem:startDateValue>\r
+         <!--Optional:-->\r
+         <tem:endDateValue>?</tem:endDateValue>\r
+         <!--Optional:-->\r
+         <tem:orderStatus>?</tem:orderStatus>\r
+         <!--Optional:-->\r
+         <tem:paymentStatus>?</tem:paymentStatus>\r
+         <!--Optional:-->\r
+         <tem:shippingStatus>?</tem:shippingStatus>\r
+         <!--Optional:-->\r
+         <tem:pageIndex>?</tem:pageIndex>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetOrderCollection>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetOrderCollection"/></con:call></con:operation><con:operation id="9867d695-5637-4e77-bdbf-35a950d0ace8" isOneWay="false" action="http://tempuri.org/INopService/GetPaymentMethodCollection" name="GetPaymentMethodCollection" bindingOperationName="GetPaymentMethodCollection" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="971bbe38-a557-47fc-9a4e-66032583fa38" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetPaymentMethodCollection>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetPaymentMethodCollection>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetPaymentMethodCollection"/></con:call></con:operation><con:operation id="c1d1f6d0-455b-457b-84da-c720dec1fba1" isOneWay="false" action="http://tempuri.org/INopService/GetProductAttributes" name="GetProductAttributes" bindingOperationName="GetProductAttributes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="983c5368-8c98-4feb-a443-f94bf6d0a572" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetProductAttributes>\r
+         <!--Optional:-->\r
+         <tem:sku>?</tem:sku>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetProductAttributes>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetProductAttributes"/></con:call></con:operation><con:operation id="0ebe575d-8927-4b65-9af3-44cde8863414" isOneWay="false" action="http://tempuri.org/INopService/GetProductAttributesValue" name="GetProductAttributesValue" bindingOperationName="GetProductAttributesValue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f8abb86c-5613-4c1f-b930-eeb175481cec" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetProductAttributesValue>\r
+         <!--Optional:-->\r
+         <tem:sku>?</tem:sku>\r
+         <!--Optional:-->\r
+         <tem:IdProductAttributes>?</tem:IdProductAttributes>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetProductAttributesValue>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetProductAttributesValue"/></con:call></con:operation><con:operation id="c3d3078c-9bb6-48c3-bc24-354a72e65b53" isOneWay="false" action="http://tempuri.org/INopService/GetProductBySku" name="GetProductBySku" bindingOperationName="GetProductBySku" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="152c2eaa-28aa-4270-92ff-e452ac39357c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetProductBySku>\r
+         <!--Optional:-->\r
+         <tem:sku>?</tem:sku>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetProductBySku>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetProductBySku"/></con:call></con:operation><con:operation id="84559d0e-64b7-4789-a72f-5502b4503d83" isOneWay="false" action="http://tempuri.org/INopService/GetShippingMethodCollection" name="GetShippingMethodCollection" bindingOperationName="GetShippingMethodCollection" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="27a7ab6f-b1e3-45d9-b4d8-83d26e765d21" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetShippingMethodCollection>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetShippingMethodCollection>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetShippingMethodCollection"/></con:call></con:operation><con:operation id="bb28b0e4-8c14-48fe-983b-f3291c17c476" isOneWay="false" action="http://tempuri.org/INopService/GetShoppingCart" name="GetShoppingCart" bindingOperationName="GetShoppingCart" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="68b3299e-2cf0-4643-9254-cf3d34e9c1de" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetShoppingCart>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetShoppingCart>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetShoppingCart"/></con:call></con:operation><con:operation id="20bc9379-8a21-417b-bbc7-3489354b00bd" isOneWay="false" action="http://tempuri.org/INopService/GetStateProvince" name="GetStateProvince" bindingOperationName="GetStateProvince" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b4f14c65-3d70-46c4-b4a7-eccd06405b96" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetStateProvince>\r
+         <!--Optional:-->\r
+         <tem:CountryId>?</tem:CountryId>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:GetStateProvince>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetStateProvince"/></con:call></con:operation><con:operation id="2ac6148f-4b79-40c8-94f3-857d4ead9ca7" isOneWay="false" action="http://tempuri.org/INopService/NewProductList" name="NewProductList" bindingOperationName="NewProductList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e27ea113-bd56-4ca6-8ce8-5b54ca4ac066" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:NewProductList>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+      </tem:NewProductList>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/NewProductList"/></con:call></con:operation><con:operation id="bd151ecb-bfb3-4dca-a225-754f72d0a464" isOneWay="false" action="http://tempuri.org/INopService/ProductList" name="ProductList" bindingOperationName="ProductList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e393f3a0-fa24-4ec2-84ab-23b60d83e526" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ProductList>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>?</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>?</tem:userPassword>\r
+         <!--Optional:-->\r
+         <tem:SearchCategoryId>?</tem:SearchCategoryId>\r
+         <!--Optional:-->\r
+         <tem:SearchManufacturerId>?</tem:SearchManufacturerId>\r
+         <!--Optional:-->\r
+         <tem:SearchProductName>?</tem:SearchProductName>\r
+         <!--Optional:-->\r
+         <tem:pageIndex>?</tem:pageIndex>\r
+      </tem:ProductList>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/ProductList"/></con:call></con:operation></con:interface><con:testSuite id="f1cb966e-9613-4fbb-ae30-aea3987a93f6" name="BasicHttpBinding_INopService TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c82d69a8-b29a-4f1a-a194-cd8603b40801" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetShippingMethodCollection TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="c1dc86f1-79fb-4b10-a91a-0120c8cbec07" name="GetShippingMethodCollectionHappyFlow"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_INopService</con:interface><con:operation>GetShippingMethodCollection</con:operation><con:request name="GetShippingMethodCollectionHappyFlow" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8db21ba-8da5-4ec1-92d1-0f7eaae86427"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetShippingMethodCollection>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>hvroon92@gmail.com</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>Zakkie45</tem:userPassword>\r
+      </tem:GetShippingMethodCollection>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="XQuery Match" id="8e2764a3-ef17-4756-86f0-c07b48bbeb92" name="XQuery Match"><con:configuration><path>declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
+declare namespace a='http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer';
+declare namespace ns1='http://tempuri.org/';
+declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
+&lt;Result>
+{
+for $z in //a:ShippingMethod
+order by $z/a:Name
+return &lt;name>{data($z/a:Name/text())}&lt;/name>
+}
+&lt;/Result></path><content><![CDATA[<Result>
+  <name>2nd Day Air</name>
+  <name>Ground</name>
+  <name>Next Day Air</name>
+</Result>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="f1003a84-acda-47c7-95b2-9307ed2800c1" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/INopService/GetShippingMethodCollection"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetShippingMethodIncorrectUserName" id="b9987bfc-5be6-4f32-b145-a7bc05cb2504"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_INopService</con:interface><con:operation>GetPaymentMethodCollection</con:operation><con:request name="GetShippingMethodIncorrectUserName" id="43530087-2cb2-427f-bf08-d082febbb7bd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetPaymentMethodCollection>
+      	<tem:usernameOrEmail>hvroon93@gmail.com</tem:usernameOrEmail>
+      	<tem:userPassword>Zakkie45</tem:userPassword>
+      </tem:GetPaymentMethodCollection>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="25e29b67-a3cd-477c-bbb0-701cbe995109"/><con:assertion type="Valid HTTP Status Codes" id="79c2123a-365d-4e46-8aa4-9f08bbd71bb1" name="Valid HTTP Status Codes"><con:configuration><codes>500</codes></con:configuration></con:assertion><con:assertion type="XPath Match" id="871653fa-159e-48a6-89b8-192849b3732e" name="XPath Match"><con:configuration><path>declare namespace a='http://schemas.microsoft.com/net/2005/12/windowscommunicationfoundation/dispatcher';
+declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
+declare namespace ns1='http://schemas.datacontract.org/2004/07/System.ServiceModel';
+declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
+//detail[1]/ns1:ExceptionDetail/ns1:Message</path><content>Not allowed</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetShippingMethodIncorrectPassword" id="a6218218-a9c7-45e9-9994-316878794da8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_INopService</con:interface><con:operation>GetPaymentMethodCollection</con:operation><con:request name="GetShippingMethodIncorrectPassword" id="afded4b2-1c19-4550-ab64-8a19750f162e"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetPaymentMethodCollection>
+      	<tem:usernameOrEmail>hvroon92@gmail.com</tem:usernameOrEmail>
+      	<tem:userPassword>Zakkie456</tem:userPassword>
+      </tem:GetPaymentMethodCollection>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3fe8744b-6619-40d7-8371-a9a67c7331bc"/><con:assertion type="XPath Match" id="e2232baa-8a6d-41a1-aecf-81aad2599eab" name="XPath Match"><con:configuration><path>declare namespace a='http://schemas.microsoft.com/net/2005/12/windowscommunicationfoundation/dispatcher';
+declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
+declare namespace ns1='http://schemas.datacontract.org/2004/07/System.ServiceModel';
+declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
+//detail/ns1:ExceptionDetail/ns1:Message</path><content>Not allowed</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="e8ba06f2-47bd-4fd8-b4f8-b38fdf974e8f" name="Invalid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetShippingMethodCollectionSoapError" id="264f9b3d-c7a7-4c2a-af7b-de85d9a86f5d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_INopService</con:interface><con:operation>GetShippingMethodCollection</con:operation><con:request name="GetShippingMethodCollectionSoapError" id="14718957-1f0e-4b18-8152-4b9a1782fc31"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetShippsingMethodCollection/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e580a987-787a-432b-954b-7f8835cf2bc4"/><con:assertion type="Not SOAP Fault Assertion" id="9f1f455d-7f34-4581-9473-69687889d070" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="cf438471-dc3c-4b51-8437-726802d9bf8f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetPaymentMethodCollection TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="f2e0c54a-2408-49dd-a81a-95aa2a33606e" name="GetPaymentMethodCollection"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_INopService</con:interface><con:operation>GetPaymentMethodCollection</con:operation><con:request name="GetPaymentMethodCollection" id="195bf21e-5c1c-41f7-a0eb-16d529c5e925"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetPaymentMethodCollection>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>hvroon92@gmail.com</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>Zakkie45</tem:userPassword>\r
+      </tem:GetPaymentMethodCollection>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="XQuery Match" id="2f4a053a-a6a5-4acd-9064-b671032cf507" name="XQuery Match"><con:configuration><path>declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
+declare namespace a='http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer';
+declare namespace ns1='http://tempuri.org/';
+declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
+
+&lt;Result>
+{
+for $z in //a:PaymentMethod
+order by $z/a:Name
+return &lt;name>{data($z/a:Name/text())}&lt;/name>
+}
+&lt;/Result></path><content><![CDATA[<Result>
+  <name>Payments.CashOnDelivery</name>
+  <name>Payments.CheckMoneyOrder</name>
+  <name>Payments.Manual</name>
+  <name>Payments.PurchaseOrder</name>
+</Result>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/INopService/GetPaymentMethodCollection" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="6816c799-ce7a-4684-beb5-f45b97cc5204" name="PaymentMethodCollectionLoad"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>120</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>20000</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:assertion type="Step Maximum" name="Step Maximum Error"><con:configuration><name>Step Maximum Error</name><min-requests>100</min-requests><max-value>300</max-value><test-step>GetPaymentMethodCollection</test-step><max-errors>-1</max-errors></con:configuration></con:assertion><con:assertion type="Step Maximum" name="Step Maximum Warning"><con:configuration><name>Step Maximum Warning</name><min-requests>100</min-requests><max-value>200</max-value><test-step>GetPaymentMethodCollection</test-step><max-errors>-1</max-errors></con:configuration></con:assertion><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

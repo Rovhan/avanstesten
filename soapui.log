@@ -1,0 +1,151 @@
+2021-12-01 22:25:12,940 WARN  [SoapUI] Missing folder [D:\School\Pipeline\pipeline\ext] for external libraries
+2021-12-01 22:25:12,941 INFO  [DefaultSoapUICore] Creating new settings at [C:\Users\Hansv\soapui-settings.xml]
+2021-12-01 22:25:13,889 INFO  [WsdlProject] Loaded project from [file:/D:/School/Pipeline/pipeline/NopService-soapui-project.xml]
+2021-12-01 22:25:13,898 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [NopService]
+2021-12-01 22:25:13,900 INFO  [SoapUITestCaseRunner] Running Project [NopService], runType = SEQUENTIAL
+2021-12-01 22:25:13,908 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [GetShippingMethodCollection TestCase]
+2021-12-01 22:25:13,921 INFO  [SoapUITestCaseRunner] running step [GetShippingMethodCollectionHappyFlow]
+2021-12-01 22:25:14,471 INFO  [SoapUITestCaseRunner] Assertion [XQuery Match] has status VALID
+2021-12-01 22:25:14,472 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+2021-12-01 22:25:14,472 INFO  [SoapUITestCaseRunner] running step [GetShippingMethodIncorrectUserName]
+2021-12-01 22:25:14,643 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-12-01 22:25:14,644 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+2021-12-01 22:25:14,644 INFO  [SoapUITestCaseRunner] Assertion [XPath Match] has status VALID
+2021-12-01 22:25:14,645 INFO  [SoapUITestCaseRunner] running step [GetShippingMethodIncorrectPassword]
+2021-12-01 22:25:14,753 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-12-01 22:25:14,758 INFO  [SoapUITestCaseRunner] Assertion [XPath Match] has status VALID
+2021-12-01 22:25:14,758 INFO  [SoapUITestCaseRunner] Assertion [Invalid HTTP Status Codes] has status VALID
+2021-12-01 22:25:14,758 INFO  [SoapUITestCaseRunner] running step [GetShippingMethodCollectionSoapError]
+2021-12-01 22:25:14,834 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-12-01 22:25:14,836 INFO  [SoapUITestCaseRunner] Assertion [SOAP Fault] has status VALID
+2021-12-01 22:25:14,836 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [GetShippingMethodCollection TestCase], time taken: 898ms, status: FINISHED
+2021-12-01 22:25:14,839 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [GetPaymentMethodCollection TestCase]
+2021-12-01 22:25:14,839 INFO  [SoapUITestCaseRunner] running step [GetPaymentMethodCollection]
+2021-12-01 22:25:15,069 INFO  [SoapUITestCaseRunner] Assertion [XQuery Match] has status VALID
+2021-12-01 22:25:15,069 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [GetPaymentMethodCollection TestCase], time taken: 229ms, status: FINISHED
+2021-12-01 22:25:15,069 INFO  [SoapUITestCaseRunner] Project [NopService] finished with status [FINISHED] in 1165ms
+2021-12-01 22:25:15,097 INFO  [WsdlProject] Loaded project from [file:/D:/School/Pipeline/pipeline/NopService-soapui-project.xml]
+2021-12-01 22:25:15,101 INFO  [SoapUILoadTestRunner] Running LoadTest [PaymentMethodCollectionLoad]
+2021-12-01 22:25:15,123 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 4.1666666E-5, 5
+2021-12-01 22:25:16,127 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.008408333, 5
+2021-12-01 22:25:17,127 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.016741667, 5
+2021-12-01 22:25:18,128 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.025083333, 5
+2021-12-01 22:25:19,129 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.033425, 5
+2021-12-01 22:25:20,132 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.041783333, 5
+2021-12-01 22:25:21,136 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.05015, 5
+2021-12-01 22:25:22,138 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.0585, 5
+2021-12-01 22:25:23,138 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.06683333, 5
+2021-12-01 22:25:24,141 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.07519167, 5
+2021-12-01 22:25:25,141 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.083525, 5
+2021-12-01 22:25:26,142 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.091866665, 5
+2021-12-01 22:25:27,143 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.100208335, 5
+2021-12-01 22:25:28,145 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.108558334, 5
+2021-12-01 22:25:29,146 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.1169, 5
+2021-12-01 22:25:30,147 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.12524167, 5
+2021-12-01 22:25:31,150 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.1336, 5
+2021-12-01 22:25:32,152 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.14195, 5
+2021-12-01 22:25:33,154 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.1503, 5
+2021-12-01 22:25:34,155 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.15864167, 5
+2021-12-01 22:25:35,156 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.16698334, 5
+2021-12-01 22:25:36,159 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.17534167, 5
+2021-12-01 22:25:37,159 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.183675, 5
+2021-12-01 22:25:38,161 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.192025, 5
+2021-12-01 22:25:39,162 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.20036666, 5
+2021-12-01 22:25:40,165 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.208725, 5
+2021-12-01 22:25:41,166 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.21706666, 5
+2021-12-01 22:25:42,168 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.22541666, 5
+2021-12-01 22:25:43,170 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.23376666, 5
+2021-12-01 22:25:44,172 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.24211666, 5
+2021-12-01 22:25:45,174 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.25046667, 5
+2021-12-01 22:25:46,175 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.25880834, 5
+2021-12-01 22:25:47,176 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.26715, 5
+2021-12-01 22:25:48,179 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.27550834, 5
+2021-12-01 22:25:49,179 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.28384167, 5
+2021-12-01 22:25:50,180 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.29218334, 5
+2021-12-01 22:25:51,183 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.30054167, 5
+2021-12-01 22:25:52,184 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.30888334, 5
+2021-12-01 22:25:53,185 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.317225, 5
+2021-12-01 22:25:54,186 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.32556668, 5
+2021-12-01 22:25:55,187 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.33390832, 5
+2021-12-01 22:25:56,188 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.34225, 5
+2021-12-01 22:25:57,189 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.35059166, 5
+2021-12-01 22:25:58,191 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.35894167, 5
+2021-12-01 22:25:59,192 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.36728334, 5
+2021-12-01 22:26:00,195 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.37564167, 5
+2021-12-01 22:26:01,196 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.38398334, 5
+2021-12-01 22:26:02,198 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.39233333, 5
+2021-12-01 22:26:03,204 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.40071666, 5
+2021-12-01 22:26:04,205 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.40905833, 5
+2021-12-01 22:26:05,206 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.4174, 5
+2021-12-01 22:26:06,207 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.42574167, 5
+2021-12-01 22:26:07,208 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.43408334, 5
+2021-12-01 22:26:08,209 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.442425, 5
+2021-12-01 22:26:09,210 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.45076665, 5
+2021-12-01 22:26:10,217 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.45915833, 5
+2021-12-01 22:26:11,218 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.4675, 5
+2021-12-01 22:26:12,218 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.47583333, 5
+2021-12-01 22:26:13,219 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.484175, 5
+2021-12-01 22:26:14,220 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.49251667, 5
+2021-12-01 22:26:15,221 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.5008583, 5
+2021-12-01 22:26:16,225 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.509225, 5
+2021-12-01 22:26:17,226 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.5175667, 5
+2021-12-01 22:26:18,228 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.5259167, 5
+2021-12-01 22:26:19,229 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.5342583, 5
+2021-12-01 22:26:20,229 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.5425917, 5
+2021-12-01 22:26:21,229 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.550925, 5
+2021-12-01 22:26:22,230 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.5592667, 5
+2021-12-01 22:26:23,233 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.567625, 5
+2021-12-01 22:26:24,234 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.57596666, 5
+2021-12-01 22:26:25,235 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.5843083, 5
+2021-12-01 22:26:26,237 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.59265834, 5
+2021-12-01 22:26:27,238 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.601, 5
+2021-12-01 22:26:28,238 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.60933334, 5
+2021-12-01 22:26:29,241 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.6176917, 5
+2021-12-01 22:26:30,242 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.6260333, 5
+2021-12-01 22:26:31,246 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.6344, 5
+2021-12-01 22:26:32,248 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.6427417, 5
+2021-12-01 22:26:33,250 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.6511, 5
+2021-12-01 22:26:34,251 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.65944165, 5
+2021-12-01 22:26:35,251 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.667775, 5
+2021-12-01 22:26:36,252 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.67611665, 5
+2021-12-01 22:26:37,253 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.6844583, 5
+2021-12-01 22:26:38,256 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.6928167, 5
+2021-12-01 22:26:39,257 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.70115834, 5
+2021-12-01 22:26:40,258 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.7095, 5
+2021-12-01 22:26:41,258 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.71783334, 5
+2021-12-01 22:26:42,259 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.726175, 5
+2021-12-01 22:26:43,260 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.7345167, 5
+2021-12-01 22:26:44,263 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.742875, 5
+2021-12-01 22:26:45,264 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.75121665, 5
+2021-12-01 22:26:46,265 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.7595583, 5
+2021-12-01 22:26:47,268 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.7679167, 5
+2021-12-01 22:26:48,271 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.776275, 5
+2021-12-01 22:26:49,273 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.784625, 5
+2021-12-01 22:26:50,274 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.79296666, 5
+2021-12-01 22:26:51,276 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.8013167, 5
+2021-12-01 22:26:52,277 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.80965835, 5
+2021-12-01 22:26:53,279 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.8180083, 5
+2021-12-01 22:26:54,282 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.82636666, 5
+2021-12-01 22:26:55,283 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.83470833, 5
+2021-12-01 22:26:56,285 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.84305835, 5
+2021-12-01 22:26:57,287 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.85140836, 5
+2021-12-01 22:26:58,289 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.8597583, 5
+2021-12-01 22:26:59,291 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.86810833, 5
+2021-12-01 22:27:00,292 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.87645, 5
+2021-12-01 22:27:01,293 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.8847917, 5
+2021-12-01 22:27:02,296 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.89315, 5
+2021-12-01 22:27:03,296 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.90148336, 5
+2021-12-01 22:27:04,297 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.909825, 5
+2021-12-01 22:27:05,299 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.918175, 5
+2021-12-01 22:27:06,300 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.92651665, 5
+2021-12-01 22:27:07,301 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.9348583, 5
+2021-12-01 22:27:08,302 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.9432, 5
+2021-12-01 22:27:09,302 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.9515333, 5
+2021-12-01 22:27:10,303 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.959875, 5
+2021-12-01 22:27:11,303 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.9682083, 5
+2021-12-01 22:27:12,305 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.9765583, 5
+2021-12-01 22:27:13,307 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.98490834, 5
+2021-12-01 22:27:14,308 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 0.99325, 5
+2021-12-01 22:27:15,309 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] progress: 1.0015917, 5
+2021-12-01 22:27:16,310 INFO  [SoapUILoadTestRunner] LoadTest [PaymentMethodCollectionLoad] finished with status FINISHED
+2021-12-01 22:27:16,310 INFO  [SoapUILoadTestRunner] SoapUI suite [BasicHttpBinding_INopService TestSuite] finished in 121210ms
