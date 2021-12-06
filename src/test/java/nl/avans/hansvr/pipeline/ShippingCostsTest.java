@@ -1,8 +1,8 @@
-package nl.avans.hansvr.testing;
+package nl.avans.hansvr.pipeline;
 
 import org.junit.jupiter.api.Test;
 
-import static nl.avans.hansvr.testing.AssignmentAvans.TypeOfShipping.*;
+import static nl.avans.hansvr.pipeline.AssignmentAvans.TypeOfShipping.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 

@@ -1,6 +1,7 @@
-package nl.avans.hansvr.testing;
+package nl.avans.hansvr.pipeline;
 
-import lombok.extern.log4j.Log4j;
+
+import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -22,7 +23,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@Log4j
+@Log4j2
 public class SeleniumFrontendTest {
     private static WebDriver driver;
     private Actions builder;
@@ -35,7 +36,6 @@ public class SeleniumFrontendTest {
 
     @BeforeEach
     public void setUp() {
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         builder = new Actions(driver);
         loginAndEmptyShoppingCartIfNeeded();
         goToHomepage();
@@ -99,7 +99,7 @@ public class SeleniumFrontendTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/case.csv", numLinesToSkip = 1)
+    @CsvFileSource(files = "src/test/resources/case.csv", numLinesToSkip = 1)
     public void givenTwoProductsAddedToShoppingCartThenCorrectPriceShouldBeCalculated(String category, String subCategory, String productTitle, int quantity, String secondCategory, String secondSubCategory, String secondProducttitle, int secondQuantity) {
         QuantityAndPrice quantityAndPriceFirst = addItemToShoppingCartFromCategoryWithProductTitle(category, subCategory, productTitle, quantity);
         QuantityAndPrice quantityAndPriceSecond = addItemToShoppingCartFromCategoryWithProductTitle(secondCategory, secondSubCategory, secondProducttitle, secondQuantity);
