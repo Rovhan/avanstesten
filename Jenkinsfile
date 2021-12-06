@@ -6,6 +6,9 @@ pipeline {
     }
     stages {
         stage('Build') {
+            environment {
+                JAVA_HOME = '/var/jenkins_home/tools/hudson.model.JDK/JDK17/jdk_17.0.1'
+            }
             steps{
                 echo "JAVA_HOME = ${JAVA_HOME}"
                 sh 'mvn clean install'
