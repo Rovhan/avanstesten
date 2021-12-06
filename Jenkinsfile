@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                sh 'mvn -Dmaven.test.failure.ignore=true site'
+                sh 'mvn clean install'
             }
             post {
                 always {
