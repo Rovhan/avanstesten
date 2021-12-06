@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps{
                 echo "JAVA_HOME = ${JAVA_HOME}"
-                sh 'mnv -v'
+                sh 'mvn -v'
                 sh 'mvn clean install'
             }
             post {
