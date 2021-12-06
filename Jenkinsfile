@@ -2,13 +2,12 @@ pipeline {
     agent any
     tools {
         maven 'Maven 4.0.0'
-        jdk 'jdk17'
+        jdk 'JDK17'
     }
     stages {
         stage('Build') {
             steps{
                 echo "JAVA_HOME = ${JAVA_HOME}"
-                sh 'mvn -v'
                 sh 'mvn clean install'
             }
             post {
