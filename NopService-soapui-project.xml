@@ -1400,4 +1400,30 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
    <soapenv:Body>\r
       <tem:GetShippsingMethodCollection/>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e580a987-787a-432b-954b-7f8835cf2bc4"/><con:assertion type="Not SOAP Fault Assertion" id="9f1f455d-7f34-4581-9473-69687889d070" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e580a987-787a-432b-954b-7f8835cf2bc4"/><con:assertion type="Not SOAP Fault Assertion" id="9f1f455d-7f34-4581-9473-69687889d070" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="cf438471-dc3c-4b51-8437-726802d9bf8f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetPaymentMethodCollection TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="f2e0c54a-2408-49dd-a81a-95aa2a33606e" name="GetPaymentMethodCollection"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_INopService</con:interface><con:operation>GetPaymentMethodCollection</con:operation><con:request name="GetPaymentMethodCollection" id="195bf21e-5c1c-41f7-a0eb-16d529c5e925"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://demowebshop.tricentis.com/Plugins/Misc.WebServicesCustomer/Remote/NopService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetPaymentMethodCollection>\r
+         <!--Optional:-->\r
+         <tem:usernameOrEmail>hvroon92@gmail.com</tem:usernameOrEmail>\r
+         <!--Optional:-->\r
+         <tem:userPassword>Zakkie45</tem:userPassword>\r
+      </tem:GetPaymentMethodCollection>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="XQuery Match" id="2f4a053a-a6a5-4acd-9064-b671032cf507" name="XQuery Match"><con:configuration><path>declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
+declare namespace a='http://schemas.datacontract.org/2004/07/Nop.Plugin.Misc.WebServicesCustomer';
+declare namespace ns1='http://tempuri.org/';
+declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
+
+&lt;Result>
+{
+for $z in //a:PaymentMethod
+order by $z/a:Name
+return &lt;name>{data($z/a:Name/text())}&lt;/name>
+}
+&lt;/Result></path><content><![CDATA[<Result>
+  <name>Payments.CashOnDelivery</name>
+  <name>Payments.CheckMoneyOrder</name>
+  <name>Payments.Manual</name>
+  <name>Payments.PurchaseOrder</name>
+</Result>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/INopService/GetPaymentMethodCollection" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="6816c799-ce7a-4684-beb5-f45b97cc5204" name="PaymentMethodCollectionLoad"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>120</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>20000</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:assertion type="Step Maximum" name="Step Maximum Error"><con:configuration><name>Step Maximum Error</name><min-requests>100</min-requests><max-value>300</max-value><test-step>GetPaymentMethodCollection</test-step><max-errors>-1</max-errors></con:configuration></con:assertion><con:assertion type="Step Maximum" name="Step Maximum Warning"><con:configuration><name>Step Maximum Warning</name><min-requests>100</min-requests><max-value>200</max-value><test-step>GetPaymentMethodCollection</test-step><max-errors>-1</max-errors></con:configuration></con:assertion><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,4 +1,4 @@
-package nl.avans.hansvr.testing;
+package nl.avans.hansvr.pipeline;
 
 public class AssignmentAvans {
     public static double shippingCosts(boolean calculateShippingCosts, TypeOfShipping typeOfShippingCosts, double totalPrice) {
@@ -9,7 +9,7 @@ public class AssignmentAvans {
                 case IN_STORE -> result = 50d;
                 case NEXT_DAY_AIR -> result = 250d;
                 case SECOND_DAY_AIR -> result = 125d;
-                case NONE -> result = 0d;
+                default -> result = 0d;
             }
         }
         return result;
