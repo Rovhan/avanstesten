@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps{
+                sh "apt-get install -y libxml2-dev"
                 echo "JAVA_HOME = ${JAVA_HOME}"
                 sh 'mvn clean install -Dwebdriver.chrome.driver=/var/jenkins_home/tools/chromedriver/chromedriver'
             }
