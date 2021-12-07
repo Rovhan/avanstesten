@@ -12,7 +12,10 @@ pipeline {
                         sh 'mvn clean install'
                     }
                 }
+                junit '*/target/surefire-reports/*.xml'
+                jacoco(execPattern: 'target/jacoco.exec')
             }
+
         }
     }
 }
