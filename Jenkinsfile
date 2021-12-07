@@ -6,9 +6,11 @@ pipeline {
     }
     stages {
         stage('Build') {
-            sauce('hanssaus') {
-                sauceconnect(useGeneratedTunnelIdentifier: true, verboseLogging: true) {
-                    sh 'mvn clean install'
+            steps {
+                sauce('hanssaus') {
+                    sauceconnect(useGeneratedTunnelIdentifier: true, verboseLogging: true) {
+                        sh 'mvn clean install'
+                    }
                 }
             }
         }
