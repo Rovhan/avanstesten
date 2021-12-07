@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps{
+                echo "Chrome driver = ${webdriver.chrome.driver}"
                 echo "JAVA_HOME = ${JAVA_HOME}"
                 sh 'mvn clean install'
             }
