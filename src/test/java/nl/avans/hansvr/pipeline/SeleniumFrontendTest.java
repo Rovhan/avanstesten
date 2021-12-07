@@ -39,9 +39,8 @@ public class SeleniumFrontendTest {
     public SauceTestWatcher watcher = new SauceTestWatcher();
 
 
-
-    @BeforeEach
-    public void setUp(TestInfo testInfo) throws MalformedURLException {
+    @BeforeAll
+    public static void beforeAll(TestInfo testInfo) throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
         options.setPlatformName("Windows 10");
         options.setBrowserVersion("latest");
@@ -52,13 +51,17 @@ public class SeleniumFrontendTest {
         options.setCapability("sauce:options", sauceOptions);
         URL url = new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, options);
-        builder = new Actions(driver);
         goToHomepage();
+    }
+
+    @BeforeEach
+    public void setUp(TestInfo testInfo) throws MalformedURLException {
+        builder = new Actions(driver);
         loginAndEmptyShoppingCartIfNeeded();
         goToHomepage();
     }
 
-    private void goToHomepage() {
+    private static void goToHomepage() {
         driver.get("http://demowebshop.tricentis.com/");
     }
 
