@@ -94,7 +94,6 @@ public class SeleniumFrontendTest {
 
         driver.findElement(By.linkText("Desktops")).click();
         driver.findElement(By.cssSelector(".item-box:nth-child(1) .button-2")).click();
-        driver.findElement(By.cssSelector(".item-box:nth-child(1) a")).click();
 
         BigDecimal priceOfProduct1 = getPriceOfProduct(By.xpath("//span[@itemprop='price']"));
         driver.findElement(By.cssSelector("dd:nth-child(2) li:nth-child(1) > label")).click();
