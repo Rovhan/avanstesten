@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             sauce('hanssaus') {
                 sauceconnect(useGeneratedTunnelIdentifier: true, verboseLogging: true) {
-                    sh 'mvn test'
+                    sh 'mvn clean install'
                 }
             }
         }
