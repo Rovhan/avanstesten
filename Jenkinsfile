@@ -7,9 +7,8 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                echo "Chrome driver = ${webdriver.chrome.driver}"
                 echo "JAVA_HOME = ${JAVA_HOME}"
-                sh 'mvn clean install'
+                sh 'mvn clean install -Dwebdriver.chrome.driver=/var/jenkins_home/tools/chromedriver/chromedriver'
             }
             post {
                 always {
