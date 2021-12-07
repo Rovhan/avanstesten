@@ -3,45 +3,62 @@ package nl.avans.hansvr.pipeline;
 
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.RegisterExtension;
+import org.junit.jupiter.api.extension.TestWatcher;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.math.BigDecimal;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @Log4j2
 public class SeleniumFrontendTest {
-    private static WebDriver driver;
+    private static RemoteWebDriver driver;
     private Actions builder;
 
-    @BeforeAll
-    public static void beforeAll(){
-        driver = new ChromeDriver();
-        goToHomepage();
-    }
+    @RegisterExtension
+    public SauceTestWatcher watcher = new SauceTestWatcher();
+
+
 
     @BeforeEach
-    public void setUp() {
+    public void setUp(TestInfo testInfo) throws MalformedURLException {
+        ChromeOptions options = new ChromeOptions();
+        options.setPlatformName("Windows 10");
+        options.setBrowserVersion("latest");
+        Map<String, Object> sauceOptions = new HashMap<>();
+        sauceOptions.put("username", System.getenv("SAUCE_USERNAME"));
+        sauceOptions.put("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
+        sauceOptions.put("name", testInfo.getDisplayName());
+        options.setCapability("sauce:options", sauceOptions);
+        URL url = new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub");
+        driver = new RemoteWebDriver(url, options);
         builder = new Actions(driver);
+        goToHomepage();
         loginAndEmptyShoppingCartIfNeeded();
         goToHomepage();
     }
 
-    private static void goToHomepage() {
+    private void goToHomepage() {
         driver.get("http://demowebshop.tricentis.com/");
     }
 
@@ -53,7 +70,7 @@ public class SeleniumFrontendTest {
     }
 
     @AfterAll
-    public static void closeDown() {
+    public static  void closeDown() {
         driver.quit();
     }
 
@@ -186,5 +203,19 @@ public class SeleniumFrontendTest {
     private void waitForSuccessMessage() {
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.className("success")));
+    }
+
+    private class SauceTestWatcher implements TestWatcher {
+        @Override
+        public void testSuccessful(ExtensionContext context) {
+            driver.executeScript("sauce:job-result=passed");
+            driver.quit();
+        }
+
+        @Override
+        public void testFailed(ExtensionContext context, Throwable cause) {
+            driver.executeScript("sauce:job-result=failed");
+            driver.quit();
+        }
     }
 }
