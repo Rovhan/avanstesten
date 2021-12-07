@@ -112,7 +112,7 @@ public class SeleniumFrontendTest {
         quantityAndPrices.add(new QuantityAndPrice(randomNumberOfBooks, priceOfProduct2));
         clickOnElementWithClassName("add-to-cart-button");
         waitForSuccessMessage();
-        driver.findElement(By.cssSelector(".ico-cart > .cart-label")).click();
+        driver.findElement(By.cssSelector(".ico-cart")).click();
         String totalChartFinal = driver.findElement(By.className("cart-total-right")).getText();
         BigDecimal valueOfItems = expectedValueOfItems(quantityAndPrices);
         assertThat(totalChartFinal, is(valueOfItems.toString()));
