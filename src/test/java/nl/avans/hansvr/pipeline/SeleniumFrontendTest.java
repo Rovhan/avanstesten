@@ -51,6 +51,7 @@ public class SeleniumFrontendTest {
         options.setCapability("sauce:options", sauceOptions);
         URL url = new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         goToHomepage();
     }
 
