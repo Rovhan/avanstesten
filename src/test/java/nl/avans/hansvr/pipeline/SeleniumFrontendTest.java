@@ -127,7 +127,7 @@ public class SeleniumFrontendTest {
 
         BigDecimal valueOfItems = expectedValueOfItems(List.of(quantityAndPriceFirst, quantityAndPriceSecond));
         driver.findElement(By.cssSelector(".ico-cart > .cart-label")).click();
-        String totalChartFinal = driver.findElement(By.className("cart-total-right")).getText();
+        String totalChartFinal = driver.findElement(By.cssSelector(".cart-total-right")).getText();
         assertThat(totalChartFinal, is(valueOfItems.toString()));
     }
 
@@ -137,13 +137,13 @@ public class SeleniumFrontendTest {
         driver.findElement(By.id("Email")).sendKeys("hvroon92@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("Zakkie45");
         driver.findElement(By.cssSelector(".login-button")).click();
-        if(Integer.parseInt(driver.findElement(By.className("cart-qty")).getText().replaceAll("[^0-9]", "")) > 0) {
+        if(Integer.parseInt(driver.findElement(By.cssSelector(".cart-qty")).getText().replaceAll("[^0-9]", "")) > 0) {
             emptyShoppingCart();
         }
     }
 
     private void clickOnElementWithClassName(String s) {
-        driver.findElement(By.className(s)).click();
+        driver.findElement(By.cssSelector("." + s)).click();
     }
 
     private BigDecimal expectedValueOfItems(List<QuantityAndPrice> quantityAndPrices) {
@@ -152,7 +152,7 @@ public class SeleniumFrontendTest {
     }
 
     private void fillInQtyInput(int numberOfItems) {
-        WebElement element2 = driver.findElement(By.className("qty-input"));
+        WebElement element2 = driver.findElement(By.cssSelector(".qty-input"));
         builder.doubleClick(element2).perform();
 
         element2.sendKeys(String.valueOf(numberOfItems));
@@ -166,7 +166,7 @@ public class SeleniumFrontendTest {
 
     private void emptyShoppingCart() {
         driver.findElement(By.cssSelector(".ico-cart > .cart-label")).click();
-        List<WebElement> elements = driver.findElements(By.className("cart-item-row"));
+        List<WebElement> elements = driver.findElements(By.cssSelector(".cart-item-row"));
         if(!elements.isEmpty()) {
             elements.forEach(this::removeItemFromCart);
             driver.findElement(By.name("updatecart")).click();
@@ -202,7 +202,7 @@ public class SeleniumFrontendTest {
 
     private void waitForSuccessMessage() {
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.className("success")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".success")));
     }
 
     private class SauceTestWatcher implements TestWatcher {
