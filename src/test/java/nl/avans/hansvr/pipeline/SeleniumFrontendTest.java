@@ -131,11 +131,7 @@ public class SeleniumFrontendTest {
     }
 
     private void loginAndEmptyShoppingCartIfNeeded() {
-        try {
-            driver.findElement(By.linkText("Log out")).click();
-        } catch (Exception e) {
-            // already logged out.
-        }
+        driver.findElements(By.linkText("Log out")).forEach(element -> element.click());
         driver.findElement(By.linkText("Log in")).click();
         driver.findElement(By.id("Email")).sendKeys("hvroon92@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("Zakkie45");
