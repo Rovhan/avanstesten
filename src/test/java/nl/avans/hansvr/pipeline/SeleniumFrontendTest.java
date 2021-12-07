@@ -115,7 +115,7 @@ public class SeleniumFrontendTest {
         clickOnElementWithClassName("add-to-cart-button");
         waitForSuccessMessage();
         driver.findElement(By.cssSelector(".ico-cart")).click();
-        String totalChartFinal = driver.findElement(By.className("cart-total-right")).getText();
+        String totalChartFinal = driver.findElement(By.cssSelector(".cart-total-right")).getText();
         BigDecimal valueOfItems = expectedValueOfItems(quantityAndPrices);
         assertThat(totalChartFinal, is(valueOfItems.toString()));
     }
