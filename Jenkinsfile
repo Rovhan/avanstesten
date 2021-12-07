@@ -12,7 +12,8 @@ pipeline {
                         sh 'mvn clean install'
                     }
                 }
-                junit '*/target/surefire-reports/*.xml'
+                sh 'mvn surefire-report:report-only'
+                sh 'mvn site -DgenerateReports=false'
                 jacoco(execPattern: 'target/jacoco.exec')
             }
 
