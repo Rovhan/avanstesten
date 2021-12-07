@@ -48,8 +48,10 @@ public class SeleniumFrontendTest {
         sauceOptions.put("username", System.getenv("SAUCE_USERNAME"));
         sauceOptions.put("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
         sauceOptions.put("name", testInfo.getDisplayName());
+        sauceOptions.put("screenResolution", "1920x1080");
         options.setCapability("sauce:options", sauceOptions);
         options.setImplicitWaitTimeout(Duration.ofSeconds(5));
+
         URL url = new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, options);
         goToHomepage();
