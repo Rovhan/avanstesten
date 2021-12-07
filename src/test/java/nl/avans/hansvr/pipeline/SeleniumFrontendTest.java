@@ -49,9 +49,9 @@ public class SeleniumFrontendTest {
         sauceOptions.put("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
         sauceOptions.put("name", testInfo.getDisplayName());
         options.setCapability("sauce:options", sauceOptions);
+        options.setImplicitWaitTimeout(Duration.ofSeconds(5));
         URL url = new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub");
         driver = new RemoteWebDriver(url, options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         goToHomepage();
     }
 
