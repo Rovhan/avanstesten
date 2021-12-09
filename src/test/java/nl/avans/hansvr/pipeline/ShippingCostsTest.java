@@ -5,8 +5,18 @@ import org.junit.jupiter.api.Test;
 import static nl.avans.hansvr.pipeline.AssignmentAvans.TypeOfShipping.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class ShippingCostsTest {
+    @Test
+    public void assignmentAvansConstructorShouldNotReturnANullValue() {
+        // when
+        AssignmentAvans assignmentAvans = new AssignmentAvans();
+
+        //then
+        assertThat(assignmentAvans, is(notNullValue()));
+    }
+
     @Test
     public void shippingCostsShouldReturn0WhenCalculateShippingCostsIsFalse() {
         //given
